@@ -1,0 +1,20 @@
+additional_snakemake_args: []
+art: null
+cli: {}
+commands:
+- run
+- script
+- env
+- profile
+- info
+- config
+conda: true
+configfile: null
+font: small
+logo: null
+resources: []
+skip_missing: false
+snakefile: null
+symlink_resources: false
+tagline: A Snakemake workflow CLI generated with Snk
+version: editable

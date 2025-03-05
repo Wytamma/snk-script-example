@@ -1,0 +1,25 @@
+shell.executable("/bin/bash")
+
+localrules: all, run_script
+
+rule run_script_with_script:
+    """
+    Run the script using the `script` directive
+    """
+    output:
+        "output.txt"
+    script:
+         "scripts/myscript.py"
+
+
+SNAKE_DIR = Path(workflow.basedir)
+SCRIPT_DIR = SNAKE_DIR / "scripts"
+
+rule run_script_with_shell:
+    """
+    Run the script using the `shell` directive
+    """
+    output:
+        "output.txt"
+    shell:
+        f"python {SCRIPT_DIR}/myscript.py"
